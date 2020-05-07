@@ -1,9 +1,7 @@
 from eh import Bankaccount
 from eh import Start
 
-a=[]
-num=0
-st = Start(a,num)
+st = Start()
 
 number = 0    #프로그램 종료 변수 
 while number!=5 :
@@ -16,13 +14,13 @@ while number!=5 :
     print("====================")
     n = input("입력: ")
     if n=='1':
-       st.one(a,num)
+       st.one()
     elif n=='2':
-        st.two(a, num)
+        st.two()
     elif n=='3' :
-        st.three(a, num)
+        st.three()
     elif n=='4' :
-        st.four(a, num)
+        st.four()
     elif n=='5' : 
         number = 5
     else:

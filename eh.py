@@ -48,14 +48,14 @@ class Bankaccount: #계좌 class 선언
         print("계좌번호: %s / 이름: %s / 잔액: %d 원"%(self.account, self.name, self.money))
 
 class Start:
-    a=[]
-    num=0
-    def __init__(self, a,num):
-        self.a=a
-        self.num=num
+    a = []
+    num = 0
+    def __init__(self):
+        self.a=[]
+        self.num=0
    
       #계좌 총 개수
-    def one(self,a, num):
+    def one(self):
         print("\n======계좌개설======")
         account = input("계좌번호: ")
         if account.isdecimal():
@@ -76,7 +76,7 @@ class Start:
             print("**잘못 입력하셨습니다**")
         
         print("====================\n")
-    def two(self,a, num):
+    def two(self):
         ac = -1
         print("\n======입금하기======")
         account = input("입금하실 계좌 번호를 입력해주세요: ")
@@ -87,9 +87,9 @@ class Start:
         if(ac == -1):#일치하는 계좌가 없는 경우
             print("**잘못 입력하셨습니다**")
         else: #일치하는 계좌가 있는 경우
-            self.a[i].in_money(name, account)
+            self.a[ac].in_money(name, account)
         print("====================\n")
-    def three(self,a, num):
+    def three(self):
         ac = -1
         print("\n======출금하기======")
         account = input("출금하실 계좌 번호를 입력해주세요: ")
@@ -100,9 +100,9 @@ class Start:
         if(ac == -1):  #일치하는 계좌가 없는 경우
             print("**잘못 입력하셨습니다**")
         else: #일치하는 계좌가 있는 경우
-            self.a[i].out_money(name, account)
+            self.a[ac].out_money(name, account)
         print("====================\n")
-    def four(self,a, num):
+    def four(self):
         print("\n======전체조회======")
         for i in range(0,self.num):#모든 계좌들 출력
             self.a[i].list_account()
