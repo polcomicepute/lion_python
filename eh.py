@@ -82,7 +82,7 @@ class Start:
         account = input("입금하실 계좌 번호를 입력해주세요: ")
         name = input("계좌이름: ")
         for i in range(0, self.num):  # 계좌 번호와 일치하는 class변수 찾기
-            if (self.a[i].account == account and self.a[i].name==name):
+            if (self.a[i].account == account):
                 ac = i
                 break
         if(ac == -1):#일치하는 계좌가 없는 경우
@@ -96,7 +96,7 @@ class Start:
         account = input("출금하실 계좌 번호를 입력해주세요: ")
         name = input("계좌이름: ")
         for i in range(0, self.num):  # 계좌 번호와 일치하는 class변수 찾기
-            if (self.a[i].account == account and self.a[i].name==name):
+            if (self.a[i].account == account):
                 ac = i
                 break
         if(ac == -1):  #일치하는 계좌가 없는 경우
