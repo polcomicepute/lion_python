@@ -85,7 +85,7 @@ class Start:
             if(self.a[i].account==account):
                 ac = i
         if(ac == -1):#일치하는 계좌가 없는 경우
-            print("**잘못 입력하셨습니다**1")
+            print("**잘못 입력하셨습니다**")
         else: #일치하는 계좌가 있는 경우
             self.a[i].in_money(name, account)
         print("====================\n")
